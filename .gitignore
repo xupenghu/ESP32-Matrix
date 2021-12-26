@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+.vscode
+part1_hello_world/build
+part2_matrix_display/build
+part2_matrix_display/part2-matrix-display.si4project
+part3_fft/build
+

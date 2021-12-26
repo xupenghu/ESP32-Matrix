@@ -1,0 +1,9 @@
+BasedOnStyle: Google
+AlignConsecutiveDeclarations: true
+AlignConsecutiveMacros: true
+AlignConsecutiveAssignments: true
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: false
+SortIncludes: false
+IndentWidth: 4
+ColumnLimit: 120
