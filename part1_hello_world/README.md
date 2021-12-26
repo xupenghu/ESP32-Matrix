@@ -35,47 +35,47 @@ $ su root
 
 5. 配置docker容器
 
-   ```shell
-   # 这样表示成功进入docker容器内部
-   root@d55d555e699b:/usr/home# ls
-   README.md  esp-adf
-   # 运行. ./export.sh
-   root@d55d555e699b:/usr/home# cd esp-adf/
-   root@d55d555e699b:/usr/home/esp-adf# cd esp-idf/ 
-   root@d55d555e699b:/usr/home/esp-adf/esp-idf# . ./export.sh
-   ```
+```shell
+# 这样表示成功进入docker容器内部
+root@d55d555e699b:/usr/home# ls
+README.md  esp-adf
+# 运行. ./export.sh
+root@d55d555e699b:/usr/home# cd esp-adf/
+root@d55d555e699b:/usr/home/esp-adf# cd esp-idf/ 
+root@d55d555e699b:/usr/home/esp-adf/esp-idf# . ./export.sh
+```
 
-   6. 找到我们的工程，编译
+6. 找到我们的工程，编译
 
-   ```shell
-   root@d55d555e699b:/home/ESP32-Matirx/part1_hello_world# idf.py build
-   # 编译完成后，可以看到如下信息
-   Scanning dependencies of target ldgen_esp32.project.ld_script
-   [100%] Generating esp32.project.ld
-   [100%] Built target ldgen_esp32.project.ld_script
-   Scanning dependencies of target ldgen
-   [100%] Built target ldgen
-   Scanning dependencies of target hello-world.elf
-   [100%] Building C object CMakeFiles/hello-world.elf.dir/dummy_main_src.c.obj
-   [100%] Linking CXX executable hello-world.elf
-   [100%] Built target hello-world.elf
-   Scanning dependencies of target app
-   [100%] Generating hello-world.bin
-   esptool.py v2.8
-   [100%] Built target app
-   
-   Project build complete. To flash, run this command:
-   ../../../usr/home/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py -p (PORT) -b 460800 --after hard_reset write_flash --flash_mode dio --flash_size detect --flash_freq 40m 0x1000 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0x10000 build/hello-world.bin
-   or run 'idf.py -p (PORT) flash'
-   ```
+```shell
+root@d55d555e699b:/home/ESP32-Matirx/part1_hello_world# idf.py build
+# 编译完成后，可以看到如下信息
+Scanning dependencies of target ldgen_esp32.project.ld_script
+[100%] Generating esp32.project.ld
+[100%] Built target ldgen_esp32.project.ld_script
+Scanning dependencies of target ldgen
+[100%] Built target ldgen
+Scanning dependencies of target hello-world.elf
+[100%] Building C object CMakeFiles/hello-world.elf.dir/dummy_main_src.c.obj
+[100%] Linking CXX executable hello-world.elf
+[100%] Built target hello-world.elf
+Scanning dependencies of target app
+[100%] Generating hello-world.bin
+esptool.py v2.8
+[100%] Built target app
+
+Project build complete. To flash, run this command:
+../../../usr/home/esp-adf/esp-idf/components/esptool_py/esptool/esptool.py -p (PORT) -b 460800 --after hard_reset write_flash --flash_mode dio --flash_size detect --flash_freq 40m 0x1000 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0x10000 build/hello-world.bin
+or run 'idf.py -p (PORT) flash'
+```
 
 7. 烧录
 
-![](D:\github\ESP32-Matrix\images\download.png)
+![](../images/download.png)
 
 8. 运行，按下开发板复位按键，打开串口助手，如果看到如下log信息，表明本实验成功运行
 
-![](D:\github\ESP32-Matrix\images\helloworldrun.png)
+![](../images/helloworldrun.png)
 
 ## 总结
 
